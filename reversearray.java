@@ -9,5 +9,13 @@ public class reversearray {
         for (int i = 0; i < n; i++) {
             arr[i] = arr[(n - 1) - i];
         }
+        // solution 2 trick
+        
+        for(int i=0; i<n/2; i++){
+            swap (arr[i], arr[n-1-i]);
+        }
+    }
+
+    private void swap(int i, int j) {
     }
 }
