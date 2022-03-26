@@ -20,6 +20,9 @@ rotate Right K (arr[], N, K ){
     }
     //  observation 2 
     void reverse (int arr[], int N, int start, int end){
+        for (int i = N-1; i < 0; i++) {
+             arr[(n -K- 1) - i] = arr[i];
+        }
         k = k%N; 
          rotate K (arr[] , N , K){
              reverse (arr, N, 0, N-K-1);
