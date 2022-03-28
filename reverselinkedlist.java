@@ -1,11 +1,11 @@
 import javax.print.event.PrintJobListener;
 
-public class linkedlist {
+public class reverselinkedlist {
     Node head; // for create and declared node
-    private linkedlist.Node newNode;
+    private reverselinkedlist.Node newNode;
     private int size;
 
-    linkedlist() {
+    reverselinkedlist() {
         this.size = 0;
     }
 
@@ -103,6 +103,24 @@ public class linkedlist {
         return size;
     }
 
+    public void reverseIterate() {
+        if (head == null || head.next == null) {
+            return;
+        }
+        Node preNode = head;
+        Node currNode = head.next;
+        while (currNode != null) {
+            Node nextNode = currNode.next;
+            currNode.next = preNode;
+
+            // update
+            preNode = currNode;
+            currNode = nextNode;
+        }
+        head.next = null;
+        head = preNode;
+    }
+
     public static void main(String[] args) {
         linkedlist k = new linkedlist();
         k.addFirst("a");
@@ -124,8 +142,8 @@ public class linkedlist {
         System.out.println(k.getSize());
         k.addFirst("this");
         System.out.println(k.getSize());
-    }
 
-    public void reverseIterate() {
+        k.reverseIterate();
+        k.printList();
     }
 }
