@@ -73,7 +73,7 @@ public class reverselinkedlist {
     // deleteFirst
     public void deleteFirst() { // if list is empty then we can say corner case
         if (head == null) {
-            System.out.print("The list is empty ");
+            System.out.println("The list is empty ");
         }
         size--;
         head = head.next; // this single line is enough for delete first
@@ -82,7 +82,7 @@ public class reverselinkedlist {
     // delete last
     public void deleteLast() {
         if (head == null) {
-            System.out.print("The list is empty ");
+            System.out.println("The list is empty ");
             return;
         }
         size--;
