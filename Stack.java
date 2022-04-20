@@ -1,15 +1,16 @@
+
 public class Stack {
     static class node {
-        int data;
+        Node data;
         Node next;
 
-        public Node(int data){
+        public void Node(int data){
             this.data = next;
             next = null;
         }
     }
 
-    static class Stack {
+    static class stack {
         public static Node head;
 
         public static boolean isEmpty() {
@@ -17,7 +18,7 @@ public class Stack {
         }
 
         public static void push(int data) { // push function
-            Node newNode = new Node(data);
+            Node newNode = new Node();
             if (isEmpty()) {
                 head = newNode;
                 return;
@@ -53,5 +54,19 @@ public class Stack {
             System.out.println(s.peek());
             s.pop();
         }
+    }
+
+    private void pop() {
+    }
+
+    private char[] peek() {
+        return null;
+    }
+
+    private boolean isEmpty() {
+        return false;
+    }
+
+    private void push(int i) {
     }
 }

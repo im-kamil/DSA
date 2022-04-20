@@ -1,4 +1,7 @@
 import java.util.*;
+import java.util.Stack;
+
+import javax.swing.plaf.nimbus.State;
 public class StackinArrayList {
 //      static class Stack{
 //         ArrayList<integer> list = new ArrayList<>();
@@ -40,11 +43,11 @@ public class StackinArrayList {
 // }
 // short
 public static void main(String[] args) {
-   Stack<integer> s = new Stack<>();
-    s.push(1);
-    s.push(2);
-    s.push(3);
-    s.push(4);
+   Stack<integer> s = new Stack();
+    // s.push(1);
+    // s.push(2);
+    // s.push(3);
+    // s.push(4);
     while (!s.isEmpty()) {
         System.out.println(s.peek());
         s.pop();
